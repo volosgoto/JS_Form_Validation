@@ -37,4 +37,13 @@ function validateEmail() {
     }
 }
 
-function validatePhone() {}
+function validatePhone() {
+    let phone = document.getElementById('phone');
+    let re = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+ 
+    if (!re.test(phone.value)) {
+        phone.classList.add('is-invalid');
+    } else {
+        phone.classList.remove('is-invalid');
+    }
+}
